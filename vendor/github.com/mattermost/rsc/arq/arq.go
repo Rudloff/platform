@@ -22,8 +22,8 @@ import (
 	"time"
 
 	"github.com/mattermost/rsc/plist"
-	"launchpad.net/goamz/aws"
-	"launchpad.net/goamz/s3"
+	"github.com/AdRoll/goamz/aws"
+	"github.com/AdRoll/goamz/s3"
 )
 
 // A Conn represents a connection to an S3 server holding Arq backups.

@@ -20,10 +20,10 @@ import (
 	"strings"
 	"time"
 
-	"appengine"
-	"appengine/datastore"
-	"appengine/memcache"
-	"appengine/user"
+	"google.golang.org/appengine"
+	"google.golang.org/appengine/datastore"
+	"google.golang.org/appengine/memcache"
+	"google.golang.org/appengine/user"
 
 	"github.com/mattermost/rsc/appfs/fs"
 	"github.com/mattermost/rsc/appfs/proto"

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"appengine"
-	"appengine/memcache"
+	"google.golang.org/appengine"
+	"google.golang.org/appengine/memcache"
 
 	_ "github.com/mattermost/rsc/appfs/server"
 	_ "github.com/mattermost/rsc/blog/post"

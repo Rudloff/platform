@@ -1,0 +1,14 @@
+Description: Fix dnsimple package name to match the one in Debian
+Author: Pierre Rudloff <contact@rudloff.pro>
+
+--- mattermost-3.8.2.orig/vendor/github.com/xenolf/lego/providers/dns/dnsimple/dnsimple.go
++++ mattermost-3.8.2/vendor/github.com/xenolf/lego/providers/dns/dnsimple/dnsimple.go
+@@ -8,7 +8,7 @@ import (
+ 	"strconv"
+ 	"strings"
+ 
+-	"github.com/dnsimple/dnsimple-go/dnsimple"
++	"github.com/weppos/dnsimple-go/dnsimple"
+ 	"github.com/xenolf/lego/acme"
+ )
+ 

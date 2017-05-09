@@ -1,0 +1,40 @@
+Description: Replace the goamz package with a fork available in Debian
+Author: Pierre Rudloff <contact@rudloff.pro>
+
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/arq/arq.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/arq/arq.go
+@@ -22,8 +22,8 @@ import (
+ 	"time"
+ 
+ 	"github.com/mattermost/rsc/plist"
+-	"launchpad.net/goamz/aws"
+-	"launchpad.net/goamz/s3"
++	"github.com/AdRoll/goamz/aws"
++	"github.com/AdRoll/goamz/s3"
+ )
+ 
+ // A Conn represents a connection to an S3 server holding Arq backups.
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/arq/arqfs/main.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/arq/arqfs/main.go
+@@ -70,7 +70,7 @@ import (
+ 	"github.com/mattermost/rsc/arq"
+ 	"github.com/mattermost/rsc/fuse"
+ 	"github.com/mattermost/rsc/keychain"
+-	"launchpad.net/goamz/aws"
++	"github.com/AdRoll/goamz/aws"
+ )
+ 
+ var mtpt = flag.String("m", "/mnt/arq", "")
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/s3get/main.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/s3get/main.go
+@@ -12,8 +12,8 @@ import (
+ 	"os"
+ 
+ 	"github.com/mattermost/rsc/keychain"
+-	"launchpad.net/goamz/aws"
+-	"launchpad.net/goamz/s3"
++	"github.com/AdRoll/goamz/aws"
++	"github.com/AdRoll/goamz/s3"
+ )
+ 
+ var list = flag.Bool("l", false, "list buckets")

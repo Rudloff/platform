@@ -12,8 +12,8 @@ import (
 	"os"
 
 	"github.com/mattermost/rsc/keychain"
-	"launchpad.net/goamz/aws"
-	"launchpad.net/goamz/s3"
+	"github.com/AdRoll/goamz/aws"
+	"github.com/AdRoll/goamz/s3"
 )
 
 var list = flag.Bool("l", false, "list buckets")

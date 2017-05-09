@@ -1,0 +1,24 @@
+Description: Fix protobuf package name
+Author: Pierre Rudloff <contact@rudloff.pro>
+
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/gtfs/gtfs.pb.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/gtfs/gtfs.pb.go
+@@ -3,7 +3,7 @@
+
+ package gtfs
+
+-import proto "code.google.com/p/goprotobuf/proto"
++import proto "github.com/golang/protobuf/proto"
+ import "math"
+
+ // Reference proto, math & os imports to suppress error if they are not otherwise used.
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/mbta/mbta.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/mbta/mbta.go
+@@ -5,7 +5,7 @@ import (
+ 	"log"
+ 	"os"
+
+-	"code.google.com/p/goprotobuf/proto"
++	"github.com/golang/protobuf/proto"
+ 	"github.com/mattermost/rsc/gtfs"
+ )

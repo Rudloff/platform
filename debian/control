@@ -1,0 +1,10 @@
+Source: mattermost
+Section: net
+Priority: optional
+Standards-Version: 3.9.8
+Vcs-Git: https://github.com/mattermost/platform.git
+Build-Depends: golang-log4go-dev, golang-github-sirupsen-logrus-dev, golang-github-julienschmidt-httprouter-dev, golang-github-pkg-sftp-dev, golang-github-cpuguy83-go-md2man-dev, golang-goprotobuf-dev, golang-github-azure-azure-sdk-for-go-dev, golang-github-aws-aws-sdk-go-dev, golang-github-garyburd-redigo-dev, golang-gopkg-alecthomas-kingpin.v2-dev, golang-golang-x-oauth2-dev, golang-github-jamesclonk-vultr-dev, golang-github-urfave-cli-dev, golang-github-adroll-goamz-dev, golang-google-appengine-dev, golang-github-xordataexchange-crypt-dev, golang-github-urfave-negroni-dev, golang-gopkg-tylerb-graceful.v1-dev, golang-github-weppos-dnsimple-go-dev, golang-golang-x-oauth2-google-dev
+
+Package: mattermost
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}

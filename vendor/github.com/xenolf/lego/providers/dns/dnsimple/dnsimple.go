@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dnsimple/dnsimple-go/dnsimple"
+	"github.com/weppos/dnsimple-go/dnsimple"
 	"github.com/xenolf/lego/acme"
 )
 

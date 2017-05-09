@@ -70,7 +70,7 @@ import (
 	"github.com/mattermost/rsc/arq"
 	"github.com/mattermost/rsc/fuse"
 	"github.com/mattermost/rsc/keychain"
-	"launchpad.net/goamz/aws"
+	"github.com/AdRoll/goamz/aws"
 )
 
 var mtpt = flag.String("m", "/mnt/arq", "")

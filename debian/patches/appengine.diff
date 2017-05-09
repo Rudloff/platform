@@ -1,0 +1,44 @@
+Description: Fix appengine package name
+Author: Pierre Rudloff <contact@rudloff.pro>
+
+--- mattermost-3.8.2.orig/vendor/github.com/go-sql-driver/mysql/appengine.go
++++ mattermost-3.8.2/vendor/github.com/go-sql-driver/mysql/appengine.go
+@@ -11,7 +11,7 @@
+ package mysql
+ 
+ import (
+-	"appengine/cloudsql"
++	"google.golang.org/appengine/cloudsql"
+ )
+ 
+ func init() {
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/app/app.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/app/app.go
+@@ -4,8 +4,8 @@ import (
+ 	"fmt"
+ 	"net/http"
+ 
+-	"appengine"
+-	"appengine/memcache"
++	"google.golang.org/appengine"
++	"google.golang.org/appengine/memcache"
+ 
+ 	_ "github.com/mattermost/rsc/appfs/server"
+ 	_ "github.com/mattermost/rsc/blog/post"
+--- mattermost-3.8.2.orig/vendor/github.com/mattermost/rsc/appfs/server/app.go
++++ mattermost-3.8.2/vendor/github.com/mattermost/rsc/appfs/server/app.go
+@@ -20,10 +20,10 @@ import (
+ 	"strings"
+ 	"time"
+ 
+-	"appengine"
+-	"appengine/datastore"
+-	"appengine/memcache"
+-	"appengine/user"
++	"google.golang.org/appengine"
++	"google.golang.org/appengine/datastore"
++	"google.golang.org/appengine/memcache"
++	"google.golang.org/appengine/user"
+ 
+ 	"github.com/mattermost/rsc/appfs/fs"
+ 	"github.com/mattermost/rsc/appfs/proto"
